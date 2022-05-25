@@ -170,7 +170,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
         $result2 = mysqli_query($con,$fetchqry2);
         $fetchqry2 = "UPDATE python SET userans='$userselected5' WHERE id='5'"; 
         $result2 = mysqli_query($con,$fetchqry2);
-        header("Location: score_card.php");
+        header("Location: score_card3.php");
     }
 
     

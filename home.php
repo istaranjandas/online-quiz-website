@@ -9,12 +9,6 @@
 <body>
     <?php
     session_start();
-
-    $_SESSION["javatest"] = "0";
-    $_SESSION["jstest"] = "0";
-    $_SESSION["mltest"] = "0";
-    $_SESSION["phptest"] = "0";
-    $_SESSION["pythontest"] = "0";
     ?>
 
     <div class="full-screen">
