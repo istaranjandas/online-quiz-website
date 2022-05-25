@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Online Quiz</h1>
+<body style="background-color: #770bb6;">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<h1 style="color:white; font-size:3rem; padding:2rem;">ML Quiz</h1>
 <?php 
 require 'dbconfig.php';
 session_start(); 
@@ -16,6 +18,7 @@ $result=mysqli_query($con,$fetchqry);
 
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
  ?>
+ <div style="background-color: white; padding:2rem;" class="jumbotron jumbotron-fluid">
     <h2><?php echo $row['que'] ?></h2>
     <label>
         <input type="radio" name="radio1" value="<?php echo $row['option 1'] ?>"><?php echo $row['option 1'] ?>
@@ -29,7 +32,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     <label>
         <input type="radio" name="radio1" value="<?php echo $row['option 4'] ?>"><?php echo $row['option 4'] ?>
     </label><br>
-    
+</div>   
     
 
 <?php
@@ -48,6 +51,7 @@ $fetchqry = "SELECT * FROM `ml` where id='2'";
 $result=mysqli_query($con,$fetchqry);
 
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
+<div style="background-color: white; padding:2rem;" class="jumbotron jumbotron-fluid">
     <h2><?php echo $row['que'] ?></h2>
     <label>
         <input type="radio" name="radio2" value="<?php echo $row['option 1'] ?>"><?php echo $row['option 1'] ?>
@@ -61,7 +65,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
     <label>
         <input type="radio" name="radio2" value="<?php echo $row['option 4'] ?>"><?php echo $row['option 4'] ?>
     </label><br>
-
+    </div>
     
 
 <?php
@@ -76,6 +80,7 @@ $fetchqry = "SELECT * FROM `ml` where id='3'";
 $result=mysqli_query($con,$fetchqry);
 
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
+<div style="background-color: white; padding:2rem;" class="jumbotron jumbotron-fluid">
     <h2><?php echo $row['que'] ?></h2>
     <label>
         <input type="radio" name="radio3" value="<?php echo $row['option 1'] ?>"><?php echo $row['option 1'] ?>
@@ -89,7 +94,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
     <label>
         <input type="radio" name="radio3" value="<?php echo $row['option 4'] ?>"><?php echo $row['option 4'] ?>
     </label><br>
-
+    </div>
     
 
 <?php
@@ -106,6 +111,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
 
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 ?>
+<div style="background-color: white; padding:2rem;" class="jumbotron jumbotron-fluid">
     <h2><?php echo $row['que'] ?></h2>
     <label>
         <input type="radio" name="radio4" value="<?php echo $row['option 1'] ?>"><?php echo $row['option 1'] ?>
@@ -119,7 +125,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
     <label>
         <input type="radio" name="radio4" value="<?php echo $row['option 4'] ?>"><?php echo $row['option 4'] ?>
     </label><br>
-    
+</div>   
 
 <?php
         if(isset($_POST['radio4'])) 
@@ -134,6 +140,7 @@ $fetchqry = "SELECT * FROM `ml` where id='5'";
 $result=mysqli_query($con,$fetchqry);
 
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
+<div style="background-color: white; padding:2rem;" class="jumbotron jumbotron-fluid">
     <h2><?php echo $row['que'] ?></h2>
     <label>
         <input type="radio" name="radio5" value="<?php echo $row['option 1'] ?>"><?php echo $row['option 1'] ?>
@@ -148,7 +155,8 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
         <input type="radio" name="radio5" value="<?php echo $row['option 4'] ?>"><?php echo $row['option 4'] ?>
     </label><br>
     
-    <input type="submit" name="submit" vlaue="Get Values">  
+    <input class="btn btn-primary" type="submit" name="submit" vlaue="Get Values"> 
+    </div>
 </form>
 
 <?php

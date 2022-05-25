@@ -21,7 +21,7 @@
             }
 ?>
 
-<body style=" background-color: black; color: white; font-size: 9rem;">
+<body style=" background-color: #770bb6; color: white; font-size: 9rem;">
 
     <h1 style="font-size: 7rem; text-decoration: underline;">SCORE CARD</h1>
     <h1 > 0<?php echo $rucked1 ;?> / 05</h1>
