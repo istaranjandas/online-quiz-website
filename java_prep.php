@@ -8,13 +8,9 @@
     <h1 style="color:white; font-size:3rem; padding:2rem;">JAVA PREP</h1>
 
 
-    <?php 
-
+<?php 
 require 'dbconfig.php';
-session_start(); 
-
-
-
+session_start();  
 ?>
     <form action="" method="post"><?php
 
@@ -193,6 +189,17 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
 
 
     </form>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <button type="button" id="submit" class="btn btn-success" onclick="funct();" style="margin-left: 42rem;">ALL QUIZZES</button>
+    <script>
+        document.getElementById("submit").addEventListener("click", funct);
+        function funct() {
+            window.location.href = "showpage.php";
+        }
+        
+    </script>
+
 </body>
 
 </html>

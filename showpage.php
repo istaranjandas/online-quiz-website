@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="showpage.css">
     <title>Select Quiz</title>
+    
 </head>
 <body>
     <ul class="grid">
+    <li class="grid__item">
+            <ul>
+                <li>
+                    <a href="home.php">HOME</a>
+                </li>
+            </ul>
+        </li><br>
         <li class="grid__item">
             <h2><a href="#">PHP</a></h2>
             <ul>
@@ -73,10 +81,11 @@
             </ul>
         </li>
         <br>
+
+
     </ul>
     
-    <button id="home" style="hover{ background:blue;}">BACK</button>
-
+    <!-- <button id="home" class="btn btn-primary" style="hover{ background:blue;} margin-bottom: 30rem;">BACK</button> -->
 
 
 

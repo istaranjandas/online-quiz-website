@@ -29,6 +29,7 @@
 
 <body>
 <?php 
+    error_reporting(0); 
     require 'dbconfig.php';
     session_start(); 
     ?>

@@ -20,6 +20,7 @@ $fetchqry = "SELECT * FROM `js` where id='1'";
 $result=mysqli_query($con,$fetchqry);
 
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
+<div style="background-color: white; padding:2rem;" class="jumbotron jumbotron-fluid">
     <h2><?php echo $row['que'] ?> <?php?></h2>
     <label>
         <input type="radio" name="radio1" value="<?php echo $row['option 1'] ?>"><?php echo $row['option 1'] ?>
@@ -33,8 +34,8 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
     <label>
         <input type="radio" name="radio1" value="<?php echo $row['option 4'] ?>"><?php echo $row['option 4'] ?>
     </label><br>
-    <input type="submit" name="submit1" value="Show Answers">
-    
+    <input type="submit" name="submit1" value="Show Answers" class="btn btn-primary">
+
     
 </form>
 <?php
@@ -42,16 +43,18 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
         if(isset($_POST['radio1'])) { $userselected = $_POST['radio1'];
     
             $fetchqry2 = "UPDATE js SET userans='$userselected' WHERE id='1'"; 
-            $result2 = mysqli_query($con,$fetchqry2);echo $userselected; ?> <br> <?php
+            $result2 = mysqli_query($con,$fetchqry2);?> <br> <?php
             echo $row['ans']; 
     }
 }
 ?>
+</div>
 <form action="" method="post"><?php
 $fetchqry = "SELECT * FROM `js` where id='2'"; 
 $result=mysqli_query($con,$fetchqry);
 
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
+<div style="background-color: white; padding:2rem;" class="jumbotron jumbotron-fluid">
     <h2><?php echo $row['que'] ?></h2>
     <label>
         <input type="radio" name="radio2" value="<?php echo $row['option 1'] ?>"><?php echo $row['option 1'] ?>
@@ -65,25 +68,26 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
     <label>
         <input type="radio" name="radio2" value="<?php echo $row['option 4'] ?>"><?php echo $row['option 4'] ?>
     </label><br>
-    <input type="submit" name="submit2" value="Show Answers">
-    
+    <input type="submit" name="submit2" value="Show Answers"  class="btn btn-primary">
+
 </form>
 <?php
     if(isset($_POST['submit2'])){
         if(isset($_POST['radio2'])) { $userselected = $_POST['radio2'];
     
             $fetchqry2 = "UPDATE js SET userans='$userselected' WHERE id='2'"; 
-            $result2 = mysqli_query($con,$fetchqry2);echo $userselected; ?> <br> <?php
+            $result2 = mysqli_query($con,$fetchqry2); ?> <br> <?php
             echo $row['ans']; 
     }
 }
 ?>
-
+</div>
 <form action="" method="post"><?php
 $fetchqry = "SELECT * FROM `js` where id='3'"; 
 $result=mysqli_query($con,$fetchqry);
 
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
+<div style="background-color: white; padding:2rem;" class="jumbotron jumbotron-fluid">
     <h2><?php echo $row['que'] ?></h2>
     <label>
         <input type="radio" name="radio3" value="<?php echo $row['option 1'] ?>"><?php echo $row['option 1'] ?>
@@ -97,25 +101,26 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
     <label>
         <input type="radio" name="radio3" value="<?php echo $row['option 4'] ?>"><?php echo $row['option 4'] ?>
     </label><br>
-    <input type="submit" name="submit3" value="Show Answers">
-    
+    <input type="submit" name="submit3" value="Show Answers"  class="btn btn-primary">
 </form>
 <?php
     if(isset($_POST['submit3'])){
         if(isset($_POST['radio3'])) { $userselected = $_POST['radio3'];
     
             $fetchqry2 = "UPDATE js SET userans='$userselected' WHERE id='3'"; 
-            $result2 = mysqli_query($con,$fetchqry2);echo $userselected; ?> <br> <?php
+            $result2 = mysqli_query($con,$fetchqry2); ?> <br> <?php
             echo $row['ans']; 
     }
 }
 ?>
+</div>
 <form action="" method="post"><?php
 
 $fetchqry = "SELECT * FROM `js` where id='4'"; 
 $result=mysqli_query($con,$fetchqry);
 
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
+<div style="background-color: white; padding:2rem;" class="jumbotron jumbotron-fluid">
     <h2><?php echo $row['que'] ?></h2>
     <label>
         <input type="radio" name="radio4" value="<?php echo $row['option 1'] ?>"><?php echo $row['option 1'] ?>
@@ -129,19 +134,20 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
     <label>
         <input type="radio" name="radio4" value="<?php echo $row['option 4'] ?>"><?php echo $row['option 4'] ?>
     </label><br>
-    <input type="submit" name="submit4" value="Show Answers">
-    
+    <input type="submit" name="submit4" value="Show Answers"  class="btn btn-primary">
+
 </form>
 <?php
     if(isset($_POST['submit4'])){
         if(isset($_POST['radio4'])) { $userselected = $_POST['radio4'];
     
             $fetchqry2 = "UPDATE js SET userans='$userselected' WHERE id='4'"; 
-            $result2 = mysqli_query($con,$fetchqry2);echo $userselected;?> <br> <?php
+            $result2 = mysqli_query($con,$fetchqry2);?> <br> <?php
             echo $row['ans']; 
     }
 }
 ?>
+</div>
 
 <form action="" method="post"><?php
 
@@ -149,6 +155,7 @@ $fetchqry = "SELECT * FROM `js` where id='5'";
 $result=mysqli_query($con,$fetchqry);
 
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
+<div style="background-color: white; padding:2rem;" class="jumbotron jumbotron-fluid">
     <h2><?php echo $row['que'] ?></h2>
     <label>
         <input type="radio" name="radio5" value="<?php echo $row['option 1'] ?>"><?php echo $row['option 1'] ?>
@@ -162,22 +169,32 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);?>
     <label>
         <input type="radio" name="radio5" value="<?php echo $row['option 4'] ?>"><?php echo $row['option 4'] ?>
     </label><br>
-    <input type="submit" name="submit5" value="Show Answers">
-    
+    <input type="submit" name="submit5" value="Show Answers"  class="btn btn-primary">
+
 </form>
 <?php
     if(isset($_POST['submit5'])){
         if(isset($_POST['radio5'])) { $userselected = $_POST['radio5'];
     
             $fetchqry2 = "UPDATE js SET userans='$userselected' WHERE id='5'"; 
-            $result2 = mysqli_query($con,$fetchqry2);echo $userselected; ?> <br> <?php
+            $result2 = mysqli_query($con,$fetchqry2);?> <br> <?php
             echo $row['ans']; 
     }
 }
 ?>
-
+</div>
 
 
 </form>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <button type="button" id="submit" class="btn btn-success" onclick="funct();" style="margin-left: 42rem;">ALL QUIZZES</button>
+    <script>
+        document.getElementById("submit").addEventListener("click", funct);
+        function funct() {
+            window.location.href = "showpage.php";
+        }
+        
+    </script>
 </body>
 </html>
